@@ -1,8 +1,7 @@
 import time,sys,os
 import random
 
-os.system("cls")
-
+os.system('clear||cls')
 
 TGREEN = '\033[32m'
 TWHITE = '\033[0m'
@@ -78,7 +77,7 @@ def tutorial():
     global warrior_health
     if town_drunk_health > 0:
         typingPrint("The Town Drunk is ready for battle?\n")
-        attack = input("What action will you take?\nAttack\nDefend\n")
+        attack = input("What action will you take?(A/D)\nAttack\nDefend\n")
         attack = attack.lower()
         if attack == "a":
             print("                            _\n"
@@ -226,7 +225,7 @@ def tutorial():
 tutorial()
 time.sleep(2)
 
-os.system("cls")
+os.system('clear||cls')
 warrior_health = 200
 typingPrint(TGREEN +"The Town Drunk has been defeated!\n The adventure continues!\n")
 print(TWHITE)
@@ -302,7 +301,7 @@ def character_selection():
         typingPrint("Are you sure you want to choose this character?")
         confirmation = input("YES or NO")
         if confirmation == "y":
-            hero = "clara, the divine archer"
+            hero = "Clara, the divine archer"
             typingPrint("You need to complete the game to unlock this character\n")
             character_selection()
         elif confirmation == "n":
@@ -329,7 +328,7 @@ def character_selection():
 character_selection()
 
 time.sleep(2)
-os.system("cls")
+os.system('clear||cls')
 print("            /\             //\n"
 "            \ \           _!_\n"
 "             \ \         /___\ \n"
@@ -359,7 +358,7 @@ typingPrint("An arrow flies past and you see a wolf fall down I lend you my bow 
 typingPrint("Warrior meets Archer.\n")
 typingPrint(TGREEN+"I am Dave the holy night of trine these enemies dont stand a chance against our combined attack they both ready their weapons. I am Clara we wont fall here.\n")
 time.sleep(1)
-typingPrint("So we all will face this darkness together I dave the holy knight of trien pledge my self to the cause, I clara give my bow to this cause, I rinceword wants to go home but I offer my magic they form the heroes of trein as lightening forms in the sky we are ready.\n")
+typingPrint("So we all will face this darkness together I dave the holy knight of trien pledge my self to the cause, I Clara give my bow to this cause, I rinceword wants to go home but I offer my magic they form the heroes of trein as lightening forms in the sky we are ready.\n")
 print(TWHITE)
 time.sleep(2)
 print("                                        __\n"
@@ -396,7 +395,7 @@ def fight_wolf():
     wolf_damage = random.randint(10,15)
     if wolf_health > 0 and warrior_health > 0:
         typingPrint("The Wolf Pack is ready for battle!\n")
-        attack = typingInput("What action will you take?\nAttack\nDefend\n")
+        attack = typingInput("What action will you take?(A/D)\nAttack\nDefend\n")
         attack = attack.lower()
         if attack == "a":
             print("                            _\n"
@@ -452,7 +451,9 @@ def fight_wolf():
             wolf_damage = random.randint(10,15)
             wolf_attack_order = random.randint(2,4)
             for i in range(wolf_attack_order):
-                print(f"Wolf Pack deals {wolf_damage} damage!")
+                print("Wolf Pack deals ")
+                print(TRED+f"{wolf_damage} damage!")
+                print(TWHITE)
             wolf_damage *= wolf_attack_order
             warrior_health -= wolf_damage
             if warrior_health < 0:
@@ -549,7 +550,7 @@ def fight_wolf():
 fight_wolf()  
 
 time.sleep(3)
-os.system("cls")
+os.system('clear||cls')
 
 typingPrint(TGREEN +"The warrior and the archer continues to walk through the forest...\nThey hear someting.\n")
 time.sleep(1)   
@@ -575,7 +576,7 @@ def fight_ogre():
     if turn%2 == 0:
         if ogre_health > 0 and warrior_health > 0:
             typingPrint("The Ogre Lord is ready for battle!\n")
-            attack = typingInput("What action will you take?\nAttack\nDefend\n")
+            attack = typingInput("What action will you take?(A/D)\nAttack\nDefend\n")
             attack = attack.lower()
             if attack == "a":
                 print("                            _\n"
@@ -705,7 +706,7 @@ def fight_ogre():
                 time.sleep(1)
                 fight_ogre()
             else:
-                print(TRED +"Invalid Input")
+                print(TRED +"Invalid Input!")
                 print(TWHITE)
                 print("--------------------\n")
                 time.sleep(1)
@@ -742,7 +743,7 @@ def fight_ogre():
 fight_ogre()
 
 time.sleep(3)
-os.system("cls")
+os.system('clear||cls')
 
 typingPrint(TGREEN +"They fought bravely and win the fight against the Ogre.\n"
 "But thats not the end...\n")
@@ -771,9 +772,45 @@ def fight_forest_troll():
     troll_damage = random.randint(10,15)
     if troll_health > 0 and warrior_health > 0:
         typingPrint("The Forest Trolls are ready for battle!\n")
-        attack = typingInput("What action will you take?\nAttack\nDefend\n")
+        attack = typingInput("What action will you take?(A/D)\nAttack\nDefend\n")
         attack = attack.lower()
         if attack == "a":
+            print("                            _\n"
+"                          .!=!.\n"
+"                          \===/\n"
+"                          |>X<|\n"
+"                          |>X<|\n"
+"                          |>X<|\n"
+"                          |>X<|\n"
+"                          |>X<|\n"
+"                          |>X<|\n"
+"                         .-----.\n"
+"                     /\__:-----:__/\ \n"
+"                   ./ ._. \.-./ ._. \. \n"
+"                 ./ ./  -.  V  .-  \. \.\n"
+"                /__/      \   /      \__\ \n"
+"                          |! !|\n"
+"                          |! !|\n"
+"                         / . . \ \n"
+"                        |!.V V.!| \n"
+"                         \. V ./ \n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                          || ||\n"
+"                           \V/\n"
+"                            '"
+  )
 
             warrior_damage = random.randint(7,10)
             typingPrint("The Forest Trolls took ")
@@ -860,7 +897,8 @@ def fight_forest_troll():
             typingPrint(TGREEN +f"{troll_health} HP remaining!\n")
             print(TWHITE)
             typingPrint("You ")
-            typingPrint(TGREEN +"heal 8 HP!"),TWHITE
+            typingPrint(TGREEN +"heal 8 HP!")
+            print(TWHITE)
             warrior_health += 7
             typingPrint("You have ")
             typingPrint(TBLUE +f"{warrior_health} HP remaining!\n")
@@ -869,7 +907,7 @@ def fight_forest_troll():
             time.sleep(1)
             fight_forest_troll()
         else:
-            print(TRED +"Invalid Input")
+            print(TRED +"Invalid Input!")
             print(TWHITE)
             print("--------------------")
             time.sleep(1)
@@ -888,7 +926,7 @@ def fight_forest_troll():
 fight_forest_troll()
 
 time.sleep(3)
-os.system("cls")
+os.system('clear||cls')
 
 typingPrint(TGREEN +"The warrior come across a castle with a light trying to get your interest, but a massive shadow on the bridge of the souls which way will you go?\n")
 print(TWHITE)
@@ -915,28 +953,41 @@ print("                    |--__\n"
 "                   Left        Right\n"
 )
 
+def riddle():
+    typingPrintFast("You must answer this riddle to enter.\nWhat walks on four legs in the morning, two in the afternoon and three in the evening?\n")
+    answer=input("Is the answer:\n (a) a man\n (b) a horse\n (c) a fish\n ")
+    answer=answer.lower()
+    if answer == "a":
+        print("You have chosen wisely and shall continue.")
+    else:
+        print("You have chosen poorly and shall remain here.")
+        print("Try again.")
+        riddle()
+
 def path_choice():
     typingPrint(TGREEN +"You have come to fork in the road, which path will you choose? The path to the left leads to forboding bridge, the right path leads to a strangley alluring light.\n")
     print(TWHITE)
     answer=typingInput("Will you go left (L) or right(R): \n")
     answer=answer.lower()
     if answer == "l":
+       riddle()
        typingPrint("You pass through the gate unhindered and welcomed inn by a mysterious force bekoning you forward.\n")
     elif answer == "r":
-       typingPrintFast("You head to the light and see a door you open it and see a grimmare of unbeatable pun or terrible take your pick held by Jon the pun master smirking and grinning like he knew ypu was coming mahhhhhhhhhhhhhh.\n"
-       "He is a level 10 pun master sorcerer supreme of all trien he says vailed line of pun and attack who speaks the unspeakable puns that are lost through time thought to bad to say he broke that and used as a weapon, he looked in the forbiben tomes of trien acient pun masters of history they cant hold to pun to power of jon and became the punmaster and stands alone at the top of pun mountian making sure the sumit is attainible through hard work and bad timing i stiming is so bad internet lag has better timing bbut he covets this power and gaurds the entrance of secrets yet to be defeated no pun can beat him only pun can slay him is forggotten for a reason.")
+       typingPrintFast("You head to the light and see a door you open it and see a grimmare of unbeatable pun or terrible take your pick held by Jon the pun master smirking and grinning like he knew you was coming mahhhhhhhhhhhhhh.\n"
+       "He is a level 10 pun master sorcerer supreme of all trien he says vailed line of pun and attack who speaks the unspeakable puns that are lost through time thought to bad to say he broke that and used as a weapon, he looked in the forbidden tomes of trien acient pun masters of history they cant hold to pun to power of jon and became the punmaster and stands alone at the top of pun mountian making sure the sumit is attainible through hard work and bad timing I stiming is so bad internet lag has better timing bbut he covets this power and gaurds the entrance of secrets yet to be defeated no pun can beat him only pun can slay him is forggotten for a reason.")
     else:
-     print("Invalid Input")
+     print("Invalid Input!")
      print("--------------------")
+     path_choice()
      time.sleep(1)
     
 
 path_choice()
 
 time.sleep(3)
-os.system("cls")
+os.system('clear||cls')
 
-typingPrintFast(TGREEN +"You see a dragon sleeping on the floor with piles of gold and the lost ring of power this item yet to make dlc you see the dragon hasnt noticed you so you draw your sword and stab it he doesnt wake up it doesnt seem to have a affect on him.\n")
+typingPrintFast(TGREEN +"You see a dragon sleeping on the floor with piles of gold and the lost ring of power this item yet to make dlc you see the dragon hasn't noticed you so you draw your sword and stab it he doesn't wake up it doesnt seem to have a affect on him.\n")
 print(TWHITE)
 time.sleep(1)
 print("                          |>                         |>\n"
@@ -959,7 +1010,7 @@ def fight_dragon():
     dragon_damage = random.randint(50,80)
     if dragon_health > 0 and warrior_health > 0:
         typingPrint("The Dragon is ready for battle!\n")
-        attack = input("What action will you take?\nAttack\nDefend\n")
+        attack = input("What action will you take?(A/D)\nAttack\nDefend\n")
         attack = attack.lower()
         if attack == "a":
             print("                            _\n"
@@ -1015,7 +1066,7 @@ def fight_dragon():
             dragon_damage = random.randint(50,80)
             warrior_health -= dragon_damage
             typingPrint("The dragon deals ")
-            typingPrint(TRED+ f"{dragon_damage} damage\n")
+            typingPrint(TRED+ f"{dragon_damage} damage!\n")
             print(TWHITE)
             if warrior_health < 0:
                 warrior_health = 0
@@ -1087,7 +1138,7 @@ def fight_dragon():
             time.sleep(1)
             fight_dragon()
         else:
-            print(TRED +"Invalid Input\n")
+            print(TRED +"Invalid Input!\n")
             print(TWHITE)
             print("--------------------")
             time.sleep(1)
@@ -1098,64 +1149,176 @@ def fight_dragon():
         print("--------------------")
     else:
         typingPrint("You have been defeated by the castle-sized Dragon!\n")
-        typingInput("Press any button to get your revenge!\n")
+        input("Press any button to get your revenge!\n")
         warrior_health = 200
         fight_dragon()
+        
 
 fight_dragon()
 
 time.sleep(3)
-os.system("cls")
+os.system('clear||cls')
+typingPrintFast(TGREEN+"You defeat the dragon and he wails in pain with your last thrust the princess comes running to you saying you rescued me thank you warrior here's a sweet roll.\n")
+time.sleep(1)
+typingPrint("You saved me warrior lets go home.\n")
+time.sleep(1)
+typingPrintFast("You take the princess to the town of trien and the king *the down drunk made the warrior head of the town guard and royal protector to the princess going forward  so lets celerbrate th ereturn of the princess with releasing the laterns of light and harmony to make the darkness disappear.")
+print(TWHITE)
+
+time.sleep(1)
+os.system('clear||cls')
 def game_end_decider():
+    print(TGREEN)
     coin_flip = random.randint(1,3)
     if coin_flip == 1:
-        print("you take the princess up on her offer")
-        print("after a long hard journey")
-        print("you return with the princess back to")
-        print("the town of Trien, you enter the castle ready to")
-        print("meet the king, however just as the doors were about")
-        print("open, you hear a very familiar groan, the doors")
-        print("swing open and to your suprise")
+        typingPrintFast("You take the princess up on her offer\n")
+        typingPrintFast("after a long hard journey\n")
+        typingPrintFast("you return with the princess back to\n")
+        typingPrintFast("the town of Trien, you enter the castle ready to\n")
+        typingPrintFast("meet the king, however just as the doors were about\n")
+        typingPrintFast("open, you hear a very familiar groan, the doors\n")
+        typingPrintFast("swing open and to your suprise\n")
+        print(TWHITE)
+        print(".....................\n")
+        print(".....................\n")
+        print(TGREEN)
+        typingPrintFast("There sat apon the throne was none other than\n")
+        typingPrintFast("Tim the town drunk\n")
+        print(TWHITE)
         print(".....................")
-        print(".....................")
-        print("there sat apon the throne was none other than")
-        print("Tim the town drunk")
-        print(".....................")
-        print("david went on to recieve incredible merit for his")
-        print("actions and was given a new position as a royal knight")
-        print("he continued to adventure on into the great unknown")
-        print("for the many years that followed")
-        print("THE END")
+        print(TGREEN)
+        typingPrintFast("David went on to recieve incredible merit for his\n")
+        typingPrintFast("actions and was given a new position as a royal knight\n")
+        typingPrintFast("he continued to adventure on into the great unknown\n")
+        typingPrintFast("for the many years that followed\n")
+        time.sleep(3)
+        print(TWHITE)
+        print("                   $\n"
+"                  $$$\n"
+"                 $$$$$\n"
+"                $$$$$$$\n"
+"               $$$$$$$$$\n"
+"              $$$$$$$$$$$\n"
+"             $$$$$$$$$$$$$\n"
+"            $$$$$$$$$$$$$$$\n"
+"           $$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"        $$$$$$$$$$$$$$$$$$$$$$$\n"
+"       $_______________________$\n"
+"      $_________________________$\n"
+"      $_________________________$\n"
+"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n"
+"    $$$$$$__$$___________$$__$$$$$\n"
+"   $$$$$___$$$$_________$$$$__$$$$\n"
+"   $$$$$____$$___________$$____$$$\n"
+"  $$$$$$_______________________$$$\n"
+" $$$$$$$$$____$$______$$______$$$\n"
+"         $$$____$$$$$$$_____$$\n"
+"           $$$___________$$$\n"
+"           $$$$$$$$$$$$$$$$$$\n"
+"         $$$$$$$$$$$$$$$$$$$$$$\n"
+"        $$$$$$$$$$$$$$$$$$$$$$$$\n"
+"       $$$$$$$$$$$$$$$$$$$$$$$$$\n"
+"       $$$$$$$$$$$$$$$$$$$$$$_$$\n"
+"       $___$$$$$$$$$$$$$$$$$$__$\n"
+"       $$__$$$$$$$$$$$$$$$$$$__$$\n"
+"         $$$$$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"           $$$___$$$$$___$$$\n"
+"              $$$_____$$$\n")
+        print("            ##########  ##    ##  ########     ########  ##   ##  ####\n"
+        "                ##      ##    ##  ##           ##        ###  ##  #    #\n"
+        "                ##      ########  ########     ########  ## # ##  #     #\n"  
+        "                ##      ##    ##  ##           ##        ##  ###  #    #\n"
+        "                ##      ##    ##  ########     ########  ##   ##  ####"
+        )
     else:
-        print("suddenly out of nowhere you hear the whistle")
-        print("of an arrow in flight, before you have a chance")
-        print("to react the arrow pierces straight through you armour")
-        print("you fall to the floor in unimaginable pain")
-        print("you look down to inspect were the rrow has struck you")
-        print("the arrow has gone through your knee")
-        print("out of the shadows your attacker starts to emerge")
-        print("..................")
-        print("..................")
-        print("one of the towns guards emerges.")
-        print("''this serves you adventurers right, i have to")
-        print("watch you all going on your cool adventures")
-        print("while i'm sat waiting for the bi-monthly")
-        print("bandit raid.''")
-        print("the guard continues to rant but you pass out from")
-        print("the pain")
-        print("..................")
-        print("..................")
-        print("..................")
-        print("you awake hours later, the sky is starting to go dark")
-        print("the princess and the guard have left.")
-        print("you drag yourself onto your feet.")
-        print("and start to make your way back to Trien")
-        print("..................")
-        print("david went on to enroll as a city guard in Trien")
-        print("he never saw the guard who shot him ever again")
-        print("he went on to gain a dislike to all adventurers")
-        print("always making them aware of his past life as a adventurer")
-        print("..................")
-        print("and then he took an arrow to the knee...")
-        print("THE END")
+        print(TGREEN)
+        typingPrintFast("Suddenly out of nowhere you hear the whistle\n")
+        typingPrintFast("of an arrow in flight, before you have a chance\n")
+        typingPrintFast("to react the arrow pierces straight through you armour\n")
+        typingPrintFast("you fall to the floor in unimaginable pain\n")
+        typingPrintFast("you look down to inspect were the rrow has struck you\n")
+        typingPrintFast("the arrow has gone through your knee\n")
+        typingPrintFast("out of the shadows your attacker starts to emerge\n")
+        print(TWHITE)
+        print("..................\n")
+        print("..................\n")
+        print(TGREEN)
+        typingPrintFast("One of the towns guards emerges.\n")
+        typingPrintFast("''this serves you adventurers right, i have to\n")
+        typingPrintFast("watch you all going on your cool adventures\n")
+        typingPrintFast("while i'm sat waiting for the bi-monthly\n")
+        typingPrintFast("bandit raid.''\n")
+        typingPrintFast("the guard continues to rant but you pass out from\n")
+        typingPrintFast("the pain\n")
+        print(TWHITE)
+        print("..................\n")
+        print("..................\n")
+        print("..................\n")
+        print(TGREEN)
+        typingPrintFast("You awake hours later, the sky is starting to go dark\n")
+        typingPrintFast("the princess and the guard have left.\n")
+        typingPrintFast("you drag yourself onto your feet.\n")
+        typingPrintFast("and start to make your way back to Trien\n")
+        print(TWHITE)
+        print("..................\n")
+        print(TGREEN)
+        typingPrintFast("David went on to enroll as a city guard in Trien\n")
+        typingPrintFast("he never saw the guard who shot him ever again\n")
+        typingPrintFast("he went on to gain a dislike to all adventurers\n")
+        typingPrintFast("always making them aware of his past life as a adventurer\n")
+        print(TWHITE)
+        print("..................\n")
+        print(TGREEN)
+        typingPrintFast("and then he took an arrow to the knee...\n")
+        time.sleep(3)
+        print(TWHITE)
+        print("                   $\n"
+"                  $$$\n"
+"                 $$$$$\n"
+"                $$$$$$$\n"
+"               $$$$$$$$$\n"
+"              $$$$$$$$$$$\n"
+"             $$$$$$$$$$$$$\n"
+"            $$$$$$$$$$$$$$$\n"
+"           $$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"        $$$$$$$$$$$$$$$$$$$$$$$\n"
+"       $_______________________$\n"
+"      $_________________________$\n"
+"      $_________________________$\n"
+"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n"
+"    $$$$$$__$$___________$$__$$$$$\n"
+"   $$$$$___$$$$_________$$$$__$$$$\n"
+"   $$$$$____$$___________$$____$$$\n"
+"  $$$$$$_______________________$$$\n"
+" $$$$$$$$$____$$______$$______$$$\n"
+"         $$$____$$$$$$$_____$$\n"
+"           $$$___________$$$\n"
+"           $$$$$$$$$$$$$$$$$$\n"
+"         $$$$$$$$$$$$$$$$$$$$$$\n"
+"        $$$$$$$$$$$$$$$$$$$$$$$$\n"
+"       $$$$$$$$$$$$$$$$$$$$$$$$$\n"
+"       $$$$$$$$$$$$$$$$$$$$$$_$$\n"
+"       $___$$$$$$$$$$$$$$$$$$__$\n"
+"       $$__$$$$$$$$$$$$$$$$$$__$$\n"
+"         $$$$$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"          $$$$$$$$$$$$$$$$$$$\n"
+"           $$$___$$$$$___$$$\n"
+"              $$$_____$$$\n")
+        print("            ##########  ##    ##  ########     ########  ##   ##  ####\n"
+        "                ##      ##    ##  ##           ##        ###  ##  #    #\n"
+        "                ##      ########  ########     ########  ## # ##  #     #\n"  
+        "                ##      ##    ##  ##           ##        ##  ###  #    #\n"
+        "                ##      ##    ##  ########     ########  ##   ##  ####"
+        )
+
+print(TWHITE)       
 game_end_decider()
